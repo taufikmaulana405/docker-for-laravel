@@ -1,7 +1,10 @@
 services:
   php-for-laravel:
-    build: ./php${PHP_VERSION}
-    image: php-for-laravel:latest
+    # jika menggunakan build
+    # build: ./php${PHP_VERSION}
+    # image: php-for-laravel:latest
+    # jika menggunakan image
+    image: ghcr.io/taufikmaulana405/docker-for-laravel:php${PHP_VERSION}
     container_name: php-for-laravel
     hostname: "php-for-laravel"
     volumes:
