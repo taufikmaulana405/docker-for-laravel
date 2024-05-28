@@ -64,7 +64,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./${{ matrix.tag }}${{ env.PACKAGE_TAG }}
+          context: ./${{ env.PACKAGE_TAG }}${{ matrix.tag }}
           file: Dockerfile
           push: true
           tags: |
