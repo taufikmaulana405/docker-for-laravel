@@ -1,4 +1,4 @@
-FROM php:7.2-fpm
+FROM php:8.3-fpm
 
 ENV PS1="\u@\h:\w\\$ "
 ENV TZ="Asia/Jakarta"
@@ -58,7 +58,8 @@ RUN docker-php-ext-install bcmath
 # PHPRedis:
 #####################################
 RUN pecl install redis && docker-php-ext-enable redis
-# RUN pecl install mongodb && docker-php-ext-enable mongodb
+RUN pecl install mongodb && docker-php-ext-enable mongodb
+
 #####################################
 # Imagick:
 #####################################
@@ -72,17 +73,15 @@ RUN pecl install imagick && \
 
 # Install the PHP gd library
 RUN docker-php-ext-install gd && \
-#    docker-php-ext-configure gd \
-#        --with-jpeg-dir
-#        --with-freetype-dir=/usr/include/freetype2 && \
-     docker-php-ext-configure gd && \
+     docker-php-ext-configure gd --with-freetype --with-jpeg && \
      docker-php-ext-install gd
+     
 #####################################
 # xDebug:
 #####################################
 
 # Install the xdebug extension
-# RUN pecl install xdebug
+RUN pecl install xdebug
 
 #####################################
 # PHP Memcached:

@@ -57,7 +57,7 @@ Docker compose setup untuk menjalankan aplikasi Laravel.
 Anda dapat menyesuaikan setup Docker dengan mengubah file `docker-compose.yml`.
 ### Mengganti versi PHP
 Untuk mengganti versi PHP yang digunakan, ubah `PHP_VERSION` pada file `.env`.
-### Membandingkan Module PHP
+### Support Module PHP
 
 | Module PHP                     | PHP 8.3 | PHP 8.2 | PHP 8.1 | PHP 8.0 | PHP 7.4 | PHP 7.3 | PHP 7.2 | PHP 7.1 |
 | ------------------------------ | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- |
