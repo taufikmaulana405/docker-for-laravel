@@ -19,7 +19,7 @@ Docker compose setup untuk menjalankan aplikasi Laravel.
     docker-compose up -d --build
     ```
 4. Akses aplikasi Laravel di `http://localhost`.
-### Cara umum untuk menginstall aplikasi Laravel
+## Cara umum untuk menginstall aplikasi Laravel
 1. Siapkan File laravel
 2. Paste filenya ke folder `src`
 3. Jalankan perintah berikut untuk membuat container

@@ -26,8 +26,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
   nginx:
-    build: ./nginx
-    image: ghcr.io/taufikmaulana405/docker-for-laravel:nginx-laravel
+    image: ghcr.io/taufikmaulana405/docker-for-laravel:nginx
     container_name: nginx
     hostname: "nginx"
     ports:
