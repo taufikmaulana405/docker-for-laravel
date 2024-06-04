@@ -140,5 +140,8 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 RUN ln -s /usr/local/bin/docker-entrypoint.sh /
 ENTRYPOINT ["docker-entrypoint.sh"]
 
+# Copy configuration files
+COPY ./www.conf /usr/local/etc/php-fpm.d/www.conf
+
 EXPOSE 9000
 CMD ["php-fpm"]
