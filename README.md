@@ -2,6 +2,16 @@
 Docker compose setup untuk menjalankan aplikasi Laravel.
 
 ## Cara menggunakan
+### Hanya menggunakan file compose
+1. Buatkan file `docker-compose.yml`
+2. Copy isi file [docker-compose-client.yml](https://github.com/taufikmaulana405/docker-for-laravel/blob/master/docker-compose-client.yml) dari repository ini
+3. Jalankan perintah berikut untuk menjalankan kontainer
+    ```
+    docker-compose up -d --build
+    ```
+4. Akses aplikasi Laravel di `http://localhost`.
+
+### Clone repository ini
 1. Clone repository ini ke dalam mesin lokal Anda.
 2. Masuk ke direktori proyek.
 3. Jalankan perintah berikut untuk menjalankan kontainer
