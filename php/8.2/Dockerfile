@@ -105,8 +105,7 @@ RUN . ~/.bashrc
 # Laravel Schedule Cron Job:
 #####################################
 
-RUN echo "* * * * * root /usr/local/bin/php /var/www/artisan schedule:run >> /dev/null 2>&1"  >> /etc/cron.d/laravel-scheduler
-RUN chmod 0644 /etc/cron.d/laravel-scheduler
+RUN { echo "* * * * * /usr/local/bin/php /var/www/html/artisan schedule:run >> /dev/null 2>&1"; } | crontab -
 
 #
 #--------------------------------------------------------------------------
